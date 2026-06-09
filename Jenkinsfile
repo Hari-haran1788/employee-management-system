@@ -18,7 +18,10 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'cd backend && pytest tests'
+                sh '''
+                cd backend
+                python3 -m pytest tests
+                '''
             }
         }
 
